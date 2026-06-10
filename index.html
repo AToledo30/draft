@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Toledo — Dev Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- cursor trail -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- noise overlay -->
+    <div id="noise"></div>
+
+    <!-- ===== NAV ===== -->
+    <nav id="navbar">
+        <a class="logo" href="#hero">at<span class="dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="#about" data-text="about">about</a></li>
+            <li><a href="#skills" data-text="skills">skills</a></li>
+            <li><a href="#projects" data-text="projects">projects</a></li>
+            <li><a href="#contact" data-text="contact">contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <span class="availability"><span class="ping"></span>open to work</span>
+            <a href="#contact" class="nav-cta">hire me ✦</a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+
+        <!-- floating code decorations -->
+        <div class="code-deco" id="deco1"><span class="cd-line"><span class="kw">const</span> <span
+                    class="fn">dream</span> = () <span class="op">=></span> <span class="st">"ship it"</span>;</span>
+        </div>
+        <div class="code-deco" id="deco2"><span class="cd-line"><span class="kw">while</span>(<span
+                    class="fn">bugs</span>) { <span class="fn">fix</span>(); }</span></div>
+        <div class="code-deco" id="deco3"><span class="cd-line"><span class="op">&lt;</span><span class="fn">div</span>
+                <span class="kw">class</span>=<span class="st">"life"</span><span class="op">&gt;</span></span></div>
+        <div class="code-deco" id="deco4"><span class="cd-line">git commit -m <span class="st">"it works"</span></span>
+        </div>
+
+        <!-- grid bg -->
+        <div class="hero-grid"></div>
+
+        <div class="hero-inner">
+            <div class="hero-badge reveal-up">
+                <span class="badge-dot"></span>
+                available for hire — san jose del monte, bulacan
+            </div>
+
+            <h1 class="hero-title reveal-up" style="--d:.1s">
+                <span class="line1">hey, i'm</span>
+                <span class="line2"><span class="name-wrap">Antonio<span class="name-accent">.</span></span></span>
+            </h1>
+
+            <p class="hero-desc reveal-up" style="--d:.2s">
+                i build things for the web — sometimes they even work on the first try.
+                <br>
+                <span class="typed-wrap">currently into: <span id="typed"></span><span class="tcursor">|</span></span>
+            </p>
+
+            <div class="hero-actions reveal-up" style="--d:.3s">
+                <a href="#projects" class="btn-main">
+                    <span>see my projects</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="#contact" class="btn-outline">say hello 👋</a>
+            </div>
+
+            <div class="hero-stats reveal-up" style="--d:.4s">
+                <div class="stat"><strong>1</strong><span>projects</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><strong>2</strong><span>years</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><strong>∞</strong><span>coffee/energy drink</span></div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+        <div class="section-wrap">
+            <div class="section-tag reveal-up">// about me</div>
+            <div class="about-layout">
+                <div class="about-left reveal-up" style="--d:.1s">
+                    <h2 class="section-title">I turn <em>ideas</em><br>into interfaces.</h2>
+                    <p>Started coding when I was senior high school studet. Two years
+                        later I'm still that same person who gets genuinely excited when creating.
+                    </p>
+                    <p>I care about the small things — the hover state that feels just right, the loading skeleton that
+                        doesn't make you anxious, the error message that actually helps.</p>
+                    <p>Outside of code: badminton, workout, and travelling</p>
+                    <div class="about-links">
+                        <a href="#" class="alink">↗ resume</a>
+                        <a href="https://github.com/AToledo30" class="alink">↗ github</a>
+                    </div>
+                </div>
+                <div class="about-right reveal-up" style="--d:.2s">
+                    <!-- avatar card -->
+                    <div class="avatar-card" id="avatarCard">
+                        <div class="avatar-img">
+                            <div class="avatar-initials">AT</div>
+                            <div class="avatar-ring"></div>
+                        </div>
+                        <div class="avatar-info">
+                            <span class="avatar-name">Antonio Toledo</span>
+                            <span class="avatar-role">Junior Front-End Dev</span>
+                        </div>
+                        <div class="avatar-badges">
+                            <span class="av-badge">⚡ HTML</span>
+                            <span class="av-badge">🎨 CSS</span>
+                            <span class="av-badge">✨ JS</span>
+                        </div>
+                        <!-- sticky fun facts -->
+                        <div class="fun-note">
+                            <span class="fn-label">fun facts</span>
+                            <ul>
+                                <li>🐛 bugs fixed: countless</li>
+                                <li>🐛 bugs created: also countless</li>
+                                <li>☕ coffees today: 1</li>
+                                <li>😅 times googled "center div": still</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section section-alt">
+        <div class="section-wrap">
+            <div class="section-tag reveal-up">// skills</div>
+            <h2 class="section-title reveal-up" style="--d:.05s">what i work <em>with</em></h2>
+            <p class="section-sub reveal-up" style="--d:.1s">honest self-assessment — no "expert" claims i can't back up
+                😅</p>
+
+            <div class="skills-grid">
+
+                <div class="skill-card reveal-up" style="--d:.1s">
+                    <div class="sc-front">
+                        <div class="sc-icon">🌐</div>
+                        <h3>html & css</h3>
+                        <div class="sc-bar">
+                            <div class="sc-fill" style="--p:90"></div>
+                        </div>
+                        <span class="sc-level">confident ✓</span>
+                        <span class="sc-hint">hover to flip →</span>
+                    </div>
+                    <div class="sc-back">
+                        <h3>html & css</h3>
+                        <ul>
+                            <li>Semantic HTML5</li>
+                            <li>Flexbox & Grid</li>
+                            <li>Animations & transitions</li>
+                            <li>Responsive design</li>
+                            <li>CSS custom properties</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal-up" style="--d:.15s">
+                    <div class="sc-front">
+                        <div class="sc-icon">⚡</div>
+                        <h3>javascript</h3>
+                        <div class="sc-bar">
+                            <div class="sc-fill" style="--p:75"></div>
+                        </div>
+                        <span class="sc-level">getting there 📈</span>
+                        <span class="sc-hint">hover to flip →</span>
+                    </div>
+                    <div class="sc-back">
+                        <h3>javascript</h3>
+                        <ul>
+                            <li>ES6+ features</li>
+                            <li>DOM manipulation</li>
+                            <li>Async / Promises</li>
+                            <li>REST APIs & fetch</li>
+                            <li>Intersection Observer</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="skill-card reveal-up" style="--d:.25s">
+                    <div class="sc-front">
+                        <div class="sc-icon">🛠️</div>
+                        <h3>tools</h3>
+                        <div class="sc-bar">
+                            <div class="sc-fill" style="--p:80"></div>
+                        </div>
+                        <span class="sc-level">daily driver 🔧</span>
+                        <span class="sc-hint">hover to flip →</span>
+                    </div>
+                    <div class="sc-back">
+                        <h3>tools</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>Figma (basics)</li>
+                            <li>Chrome DevTools</li>
+                            <li>Claude code</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="learning-banner reveal-up" style="--d:.3s">
+                <span class="lb-label">🔥 currently leveling up</span>
+                <div class="lb-tags">
+                    <span>TypeScript</span>
+                    <span>Next.js</span>
+                    <span>Tailwind</span>
+                    <span>Vitest</span>
+                    <span>Node.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+        <div class="section-wrap">
+            <div class="section-tag reveal-up">// projects</div>
+            <h2 class="section-title reveal-up" style="--d:.05s">stuff i've <em>built</em></h2>
+            <p class="section-sub reveal-up" style="--d:.1s">the ones i'm proud of — pinky promise they actually work
+            </p>
+
+            <div class="projects-list">
+
+                <div class="project-row reveal-up" style="--d:.1s">
+                    <div class="pr-num">01</div>
+                    <div class="pr-content">
+                        <div class="pr-top">
+                            <div>
+                                <h3>Planet 101 - Game Designer<span class="pr-emoji">🌏</span></h3>
+                                <p>Basta ptask namin to, ako gumawa halos lahat ng icons, mission, character and
+                                    animation</p>
+                            </div>
+                            <div class="pr-actions">
+                                <a href="#" class="pr-btn" title="View on GitHub">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                                    </svg>
+                                    code
+                                </a>
+                                <a href="#" class="pr-btn pr-btn-accent" title="Live Demo">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                    live demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pr-tags">
+                            <span>Unity</span><span>VsCode</span><span>Aseprite</span>
+                        </div>
+                        <div class="pr-meta">2026 · ~3 months build time</div>
+                    </div>
+                    <div class="pr-visual">
+                        <img src="2727d611-2a9c-4ba3-bdb7-58a2fd4f90db.jpg" alt="Image">
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section section-alt">
+        <div class="section-wrap">
+            <div class="section-tag reveal-up">// contact</div>
+            <h2 class="section-title reveal-up" style="--d:.05s">let's make<br>something <em>cool</em>.</h2>
+            <p class="section-sub reveal-up" style="--d:.1s">i reply fast. like, actually fast. 🚀</p>
+
+            <div class="contact-layout">
+                <div class="contact-left reveal-up" style="--d:.15s">
+                    <p class="contact-blurb">whether you have a project in mind, a job opportunity, or just want to chat
+                        about why CSS is both amazing and cursed — i'm here for it.</p>
+
+                    <div class="contact-socials">
+                        <a href="mailto:alex@example.com" class="csocial" id="emailBtn">
+                            <div class="cs-icon">📧</div>
+                            <div class="cs-text">
+                                <span class="cs-label">email me</span>
+                                <span class="cs-val">toledantonio1130@gmail.com</span>
+                            </div>
+                            <svg class="cs-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/AToledo30" class="csocial">
+                            <div class="cs-icon">🐙</div>
+                            <div class="cs-text">
+                                <span class="cs-label">github</span>
+                                <span class="cs-val">https://github.com/AToledo30</span>
+                            </div>
+                            <svg class="cs-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="contact-right reveal-up" style="--d:.2s">
+                    <form id="contact-form" class="cform">
+                        <div class="cform-row">
+                            <div class="cfield">
+                                <label for="name">your name</label>
+                                <input type="text" id="name" placeholder="Jamie Smith" required>
+                            </div>
+                            <div class="cfield">
+                                <label for="email">your email</label>
+                                <input type="email" id="email" placeholder="jamie@cool.dev" required>
+                            </div>
+                        </div>
+                        <div class="cfield">
+                            <label for="subject">what's this about?</label>
+                            <div class="subject-pills" id="subjectPills">
+                                <button type="button" class="spill active" data-val="job opportunity">job opportunity
+                                    💼</button>
+                                <button type="button" class="spill" data-val="collab">collab 🤝</button>
+                                <button type="button" class="spill" data-val="just saying hi">just saying hi 👋</button>
+                                <button type="button" class="spill" data-val="other">other ✨</button>
+                            </div>
+                        </div>
+                        <div class="cfield">
+                            <label for="message">your message</label>
+                            <textarea id="message" rows="4" placeholder="hey alex! i saw your portfolio and..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="csubmit" id="submitBtn">
+                            <span id="btnText">send it 🚀</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <span class="f-logo">at <span class="dot">.</span></span>
+                <div class="footer-nav">
+                    <a href="#about">about</a>
+                    <a href="#skills">skills</a>
+                    <a href="#projects">projects</a>
+                    <a href="#contact">contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="f-copy">© 2026 Antonio Toledo — made with ☕ & a lot of Stack Overflow 🙏</span>
+                <span class="f-mono">// v2.4.1 — deployed friday at 11pm because of course</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
